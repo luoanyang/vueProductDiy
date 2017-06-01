@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>奶瓶diy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/header.jpg" width="100%">
+    </header>
+    <div class="container clearFix">
+        <div class="diy-left">
+            <img :src="proSrc" width="360px">
+            <div class="diy-img-wrap">
+                <div class="diy-img-box" :style="{'left':diyBoxLeft+'px','top':diyBoxTop+'px','width':diyBoxWidth+'%'}">
+                    <div class="diy-box-move" @mouseout="isMouseDown=false" @mousedown="imgMouseDown" @mousemove="imgMousemove" @mouseup="isMouseDown=false"></div>
+                    <div class="diy-box-zoom" @mousedown="zoomMouseDown" @mousemove="zoomMousemove" @mouseout="isZoom=false" @mouseup="isZoom=false"></div>
+                    <img v-show="uploadImg!==''" :src="uploadImg">
+                </div>
+            </div>
+        </div>
+        <div class="diy-right">
+            <form>
+                <h2>奶瓶选择：</h2>
+                <ul class="clearFix">
+                    <li class="title">奶瓶颜色选择：</li>
+                    <li :class="{on:proSrc=='img/img(1).jpg'}"><span @click="proSrc='img/img(1).jpg'">粉红色</span></li>
+                    <li :class="{on:proSrc=='img/img(2).jpg'}"><span @click="proSrc='img/img(2).jpg'">粉黄色</span></li>
+                    <li :class="{on:proSrc=='img/img(3).jpg'}"><span @click="proSrc='img/img(3).jpg'">蓝色</span></li>
+                    <li :class="{on:proSrc=='img/img(4).jpg'}"><span @click="proSrc='img/img(4).jpg'">粉绿色</span></li>
+                </ul>
+                <label class="upload-img">
+                    <input type="file" @change="onImgChange" accept="image/png, image/jpeg, image/gif, image/jpg">
+                    <div>上传diy图片</div>
+                </label>
+                <div class="save-img" onclick="saveImg()">保存图片</div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <img src="img/footer.jpg" width="100%">
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/basic.js"></script>
+</body>
+
+</html>

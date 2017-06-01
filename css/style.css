@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+}
+
+.clearFix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    margin: 100px 0;
+}
+
+.diy-left,
+.diy-right {
+    width: 50%;
+    float: left;
+}
+
+.diy-left {
+    text-align: center;
+    position: relative;
+}
+
+.diy-left .diy-img-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.diy-left .diy-img-wrap .diy-img-box {
+    width: 50%;
+    position: absolute;
+    background: #eee;
+
+}
+
+.diy-left .diy-img-wrap .diy-img-box img {
+    max-width: 100%;
+    float: left;
+}
+
+.diy-left .diy-img-wrap .diy-img-box:hover .diy-box-move,
+.diy-left .diy-img-wrap .diy-img-box:hover .diy-box-zoom {
+    opacity: 1;
+}
+
+.diy-left .diy-img-wrap .diy-img-box .diy-box-move {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: #eee;
+    cursor: move;
+    opacity: 0;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+}
+
+.diy-left .diy-img-wrap .diy-img-box .diy-box-zoom {
+position: absolute;
+    right: 0;
+    height: 10%;
+    width: 10%;
+    background: #9E9E9E;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    cursor: ne-resize;
+    opacity: 0
+}
+
+.diy-right h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.diy-right ul li {
+    font-size: 16px;
+    float: left;
+}
+
+.diy-right ul li.title {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.diy-right ul li.on span {
+    background: #CDDC39;
+}
+
+.diy-right ul li span {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    margin-right: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.diy-right .upload-img {
+    margin: 30px 0;
+    display: block;
+}
+
+.diy-right .upload-img input[type='file'] {
+    display: none;
+}
+
+.diy-right .upload-img div {
+    padding: 5px 10px;
+    background: #c40030;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.save-img {
+    padding: 8px 14px;
+    background: #4CAF50;
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
