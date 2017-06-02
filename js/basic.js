@@ -45,7 +45,7 @@ var vm = new Vue({
                 var maxX = e.target.parentNode.parentNode.clientWidth - e.target.parentNode.clientWidth;
                 var maxY = e.target.parentNode.parentNode.clientHeight - e.target.parentNode.clientHeight;
                 this.diyBoxLeft = Math.min(Math.max(0, mouseX - this.mouseOffsetX), maxX);
-                this.diyBoxTop = Math.min(Math.max(0, mouseY - this.mouseOffsetY), maxX);
+                this.diyBoxTop = Math.min(Math.max(0, mouseY - this.mouseOffsetY), maxY);
                 //end-拖拽范围设置
             }
         },
